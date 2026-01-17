@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Ready to check you general knowledge!</h1>
+    <h2>Select on of the following topics</h2>
+    <div class="topic-container">
+        <div class="topics" onclick="selectTopic('Pakistan History')">Pakistan History</div>
+        <div class="topics" onclick="selectTopic('World History')">World History</div>
+        <div class="topics" onclick="selectTopic('Science')">Science</div>
+        <div class="topics" onclick="selectTopic('Computer Science')">Computer Science</div>
+    </div>
+    <script>
+        function selectTopic(topic) {
+            localStorage.setItem('selectedTopic', topic);
+            window.location.href = 'quiz.html';
+            localStorage.setItem('time', 60);
+        }
+    </script>
+    <script src="logic.js"></script>
+</body>
+
+</html>
